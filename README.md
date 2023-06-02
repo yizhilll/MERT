@@ -64,4 +64,13 @@ We also provide the corresponding fairseq checkpoint for continual training or f
 
 ## Citation
 
-TBD.
+```shell
+@misc{li2023mert,
+      title={MERT: Acoustic Music Understanding Model with Large-Scale Self-supervised Training}, 
+      author={Yizhi Li and Ruibin Yuan and Ge Zhang and Yinghao Ma and Xingran Chen and Hanzhi Yin and Chenghua Lin and Anton Ragni and Emmanouil Benetos and Norbert Gyenge and Roger Dannenberg and Ruibo Liu and Wenhu Chen and Gus Xia and Yemin Shi and Wenhao Huang and Yike Guo and Jie Fu},
+      year={2023},
+      eprint={2306.00107},
+      archivePrefix={arXiv},
+      primaryClass={cs.SD}
+}
+```
