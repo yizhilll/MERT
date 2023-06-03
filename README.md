@@ -20,11 +20,15 @@ You could use the script `./scripts/environment_setup.sh` to set up the python e
 
 ### Data Preparation
 
-The data preparation can be referred to [HuBERT](https://github.com/facebookresearch/fairseq/tree/main/examples/hubert) for more details.
+The data preparation and format can be referred to [HuBERT](https://github.com/facebookresearch/fairseq/tree/main/examples/hubert) for more details.
 
 Generally, there are 2 things you need to prepare:
 * `DATA_DIR=${MAP_PROJ_DIR}/data/audio_tsv`: a folder that contains a `train.tsv` and a `valid.tsv` file, which specify the root path to the audios at the first line and the relative paths at the rest lines.
 * `LABEL_ROOT_DIR=${MAP_PROJ_DIR}/data/labels`: a folder filled with all the discrete tokens that need to prepare before training. They could be K-means or RVQ-VAE tokens.
+
+The two options for acoustic teacher peuso labels in MERT training can be constructed by:
+* K-means Labels from [HuBERT](https://github.com/facebookresearch/fairseq/tree/main/examples/hubert/simple_kmeans) (the vanilla MFCC version)
+* codecs from [EnCodec](https://github.com/facebookresearch/encodec)
 
 ### Start Training
 
