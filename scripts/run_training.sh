@@ -64,7 +64,7 @@ case $YAML_NAME_WITHOUT_EXT in
 
   OMP_NUM_THREADS=6 ${run_command_prefix} python -u ${FAIRSEQ_PATH}/fairseq_cli/hydra_train.py \
     --config-dir ${CONFIG_DIR} --config-name ${YAML_NAME_WITHOUT_EXT} \
-    common.user_dir=${FAIRSEQ_PATH}/examples/mert \
+    common.user_dir=${MAP_PROJ_DIR}/mert_faiseq \
     common.wandb_project=pretrain_${TRAINING_SETTING} \
     checkpoint.save_dir=${SAVE_DIR}/ckpt_${TRAINING_SETTING}/${YAML_NAME_WITHOUT_EXT} \
     distributed_training.distributed_rank=${ACTUAL_WORKER_RANK} \

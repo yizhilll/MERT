@@ -67,9 +67,10 @@ ngpus=4
 # conda install cython
 pip install --upgrade pip
 
-# cd ${WORKING_DIR}
-# # fairseq                   0.12.2                   pypi_0    pypi
-# git clone https://github.com/pytorch/fairseq
+mkdir ${MAP_PROJ_DIR}/src/fairseq
+cd ${MAP_PROJ_DIR}/src
+# fairseq                   0.12.2                   pypi_0    pypi
+git clone https://github.com/pytorch/fairseq
 # cd fairseq
 cd ${MAP_PROJ_DIR}/src/fairseq
 pip install --editable ./

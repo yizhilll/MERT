@@ -5,7 +5,8 @@ This is the official implementation of the paper "MERT: Acoustic Music Understan
 
 ## Training
 
-The MERT training is implemented with [fairseq](https://github.com/facebookresearch/fairseq). We clone the fairseq repo inside our repo and implement MERT as a fairseq example, and give the soft link of the code at `./mert_fairseq`.
+The MERT training is implemented with [fairseq](https://github.com/facebookresearch/fairseq). 
+You need to clone the fairseq repo inside our repo at `./src/fairseq` and MERT implementation codes as a fairseq example projcet. 
 
 ### Environment Setup
 
@@ -16,7 +17,8 @@ The training of MERT requires:
 * [nccl](https://github.com/NVIDIA/nccl) for multiple device training (optional)
 * [fairscale](https://github.com/facebookresearch/fairscale) for FSDP and CPU offloading (optional)
 
-You could use the script `./scripts/environment_setup.sh` to set up the python environment from scarth. All the relevant folders will be placed at the customized `$MAP_PROJ_DIR` folder.
+You could use the script `./scripts/environment_setup.sh` to set up the python environment from scarth, which could be easily modified to DOCKERFILE. 
+All the relevant folders will be placed at the customized MERT repo folder path `$MAP_PROJ_DIR`.
 
 ### Data Preparation
 
@@ -31,6 +33,10 @@ The two options for acoustic teacher peuso labels in MERT training can be constr
 * codecs from [EnCodec](https://github.com/facebookresearch/encodec)
 
 ### Start Training
+
+Noted that we follow the fariseq development protocol to put our codes as an example project. 
+When running the fairseq program, you can specify the MERT customized codes by `common.user_dir=${MAP_PROJ_DIR}/mert_faiseq`.
+
 
 After the environment is set up, you could use the following scripts:
 ```shell
