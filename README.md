@@ -55,6 +55,9 @@ We use the huggingface models for interface and evaluation. Using the example of
 python MERT/scripts/MERT_demo_inference.py
 ```
 
+## Benchmarking and Baselines
+
+MERT is also evaluated at the [MARBLE](https://marble-bm.shef.ac.uk) benchmark. The codes for evaluation on MERT and baselines can be referred to MARBLE.
 
 ## Checkpoints
 
