@@ -5,7 +5,7 @@ This is the official implementation of the paper "MERT: Acoustic Music Understan
 
 **Evaluation, Benchmarking and Baselines**:
 * The codes for downstream task evaluation on MERT and baseline models can be referred to [MARBLE](https://marble-bm.shef.ac.uk) benchmark.
-* MERT is also evaluated with the [MARBLE protocol]([https://marble-bm.shef.ac.uk](https://marble-bm.shef.ac.uk/submit)) and reported on the [music understanding leaderboard](https://marble-bm.shef.ac.uk/leaderboard). 
+* MERT is also evaluated with the [MARBLE protocol](https://marble-bm.shef.ac.uk/submit) and reported on the [music understanding leaderboard](https://marble-bm.shef.ac.uk/leaderboard). 
 
 ## Training
 
