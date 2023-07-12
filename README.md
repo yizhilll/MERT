@@ -3,6 +3,10 @@
 This is the official implementation of the paper "MERT: Acoustic Music Understanding Model with Large-Scale Self-supervised Training".
 
 
+**Evaluation, Benchmarking and Baselines**:
+* The codes for downstream task evaluation on MERT and baseline models can be referred to [MARBLE](https://marble-bm.shef.ac.uk) benchmark.
+* MERT is also evaluated with the [MARBLE protocol]([https://marble-bm.shef.ac.uk](https://marble-bm.shef.ac.uk/submit)) and reported on the [music understanding leaderboard](https://marble-bm.shef.ac.uk/leaderboard). 
+
 ## Training
 
 The MERT training is implemented with [fairseq](https://github.com/facebookresearch/fairseq). 
@@ -54,10 +58,6 @@ We use the huggingface models for interface and evaluation. Using the example of
 ```shell
 python MERT/scripts/MERT_demo_inference.py
 ```
-
-## Benchmarking and Baselines
-
-MERT is also evaluated at the [MARBLE](https://marble-bm.shef.ac.uk) benchmark. The codes for evaluation on MERT and baselines can be referred to MARBLE.
 
 ## Checkpoints
 
