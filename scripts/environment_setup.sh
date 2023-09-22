@@ -84,8 +84,9 @@ pip3 install packaging
 cd ${WORKING_DIR}
 git clone https://github.com/NVIDIA/apex
 cd apex
-sed -i '32 a \ \ \ \ \ \ \ \ return 0' setup.py # ignore cuda version
-pip install -v --no-cache-dir --global-option="--cpp_ext" --global-option="--cuda_ext" \
+# deprecated modification
+# sed -i '32 a \ \ \ \ \ \ \ \ return 0' setup.py # ignore cuda version
+pip install -v --no-cache-dir --no-build-isolation --global-option="--cpp_ext" --global-option="--cuda_ext" \
   --global-option="--deprecated_fused_adam" --global-option="--xentropy" \
   --global-option="--fast_multihead_attn" ./
 
