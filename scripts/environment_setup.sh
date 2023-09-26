@@ -90,10 +90,12 @@ pip install -v --no-cache-dir --no-build-isolation --global-option="--cpp_ext" -
   --global-option="--deprecated_fused_adam" --global-option="--xentropy" \
   --global-option="--fast_multihead_attn" ./
 
+pip install pytorch-extension
+
 
 conda install -y -c conda-forge pysoundfile libsndfile librosa ffmpeg
 pip install pyarrow pydub npy-append-array tensorboardX scikit-learn pandas nnAudio wandb
-# pip install --upgrade numpy==1.23
+pip install "numpy<1.24"
 
 
 wandb login
