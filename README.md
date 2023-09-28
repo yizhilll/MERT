@@ -26,8 +26,6 @@ All the relevant folders will be placed at the customized MERT repo folder path 
 
 ### Data Preparation
 
-The data preparation and format can be referred to [HuBERT](https://github.com/facebookresearch/fairseq/tree/main/examples/hubert) for more details.
-
 Generally, there are 2 things you need to prepare:
 * `DATA_DIR=${MAP_PROJ_DIR}/data/audio_tsv`: a folder that contains a `train.tsv` and a `valid.tsv` file, which specify the root path to the audios at the first line and the relative paths at the rest lines.
 * `LABEL_ROOT_DIR=${MAP_PROJ_DIR}/data/labels`: a folder filled with all the discrete tokens that need to prepare before training. They could be K-means or RVQ-VAE tokens.
@@ -35,6 +33,22 @@ Generally, there are 2 things you need to prepare:
 The two options for acoustic teacher peuso labels in MERT training can be constructed by:
 * K-means Labels from [HuBERT](https://github.com/facebookresearch/fairseq/tree/main/examples/hubert/simple_kmeans) (the vanilla MFCC version)
 * codecs from [EnCodec](https://github.com/facebookresearch/encodec)
+
+Scripts for preparing the training data:
+```shell
+# First prepare the manifest file indexing the audios.
+# If needed the audios will be converted to 24K Hz.
+python scripts/prepare_manifest.py --root-dir /absolute/path/to/original/custom_audio_dataset \
+      --target-rate 24000 --converted-root-dir /absolute/path/to/converted/custom_audio_dataset \
+      --out-dir data/custom_audio_dataset_manifest --extension wav
+      
+# Prepare the codecs for audios in the manifest
+python scripts/prepare_codecs_from_manifest.py  \
+      --manifest_path data/custom_audio_dataset_manifest --manifest_file_name train.tsv \
+      --out_root data/encodec_labels/custom_audio_dataset --codebook_size 1024 --n_codebook 8
+```
+
+The data preparation and format can be referred to [HuBERT](https://github.com/facebookresearch/fairseq/tree/main/examples/hubert) for more details.
 
 ### Start Training
 
