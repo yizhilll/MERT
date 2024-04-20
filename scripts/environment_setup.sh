@@ -103,3 +103,7 @@ wandb login
 pip install fairscale
 pip install deepspeed
 ds_report
+
+
+# for Encodec data preparation
+pip install -U encodec
