@@ -83,10 +83,16 @@ Our Huggingface Transformers checkpoints for convenient inference are uploaded t
 * [MERT-v1-95M](https://huggingface.co/m-a-p/MERT-v1-95M): The base (95M) model trained with RVQ-VAE acoustic teacher and musical teacher.
 * [MERT-v1-330M](https://huggingface.co/m-a-p/MERT-v1-330M): The large (330M) model trained with RVQ-VAE acoustic teacher and musical teacher.
 
+To convert your self-trained models, check the scripts:
+```shell
+bash scripts/convert_HF_script.sh default mert config_mert_base [/absolute/path/to/a/fairseq/checkpoint.pt]
+```
+
 ### Fairseq Checkpoint
 
-We also provide the corresponding fairseq checkpoint for continual training or further modification. Coming soon.
-
+We also provide the corresponding fairseq checkpoint for continual training or further modification hosted at the corresponding HF repos:
+* [MERT-v1-95M](https://huggingface.co/m-a-p/MERT-v1-95M/blob/main/MERT-v1-95M_fairseq.pt) 
+* [MERT-v1-330M](https://huggingface.co/m-a-p/MERT-v1-330M/blob/main/MERT-v1-330M_fairseq.pt) 
 
 
 ## Citation
