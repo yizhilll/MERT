@@ -20,7 +20,9 @@ The training of MERT requires:
 * [apex](https://github.com/NVIDIA/apex) for half-precision training (optaional)
 * [nccl](https://github.com/NVIDIA/nccl) for multiple device training (optional)
 * [fairscale](https://github.com/facebookresearch/fairscale) for FSDP and CPU offloading (optional)
+* [WARNING] the version of [transformers](https://huggingface.co/docs/transformers/en/index) requires to be `transformers==4.38` since a latter update cause incompatible.
 
+  
 You could use the script `./scripts/environment_setup.sh` to set up the python environment from scarth, which could be easily modified to DOCKERFILE. 
 All the relevant folders will be placed at the customized MERT repo folder path `$MAP_PROJ_DIR`.
 
